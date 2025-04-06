@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>German Mnemonic Genius</title>
+  <link rel="stylesheet" href="stylez.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🇩🇪 Mnemonic Memory App</h1>
+
+      <div class="controls-grid">
+        <div class="dropdown-control">
+          <label for="level-selector">Select Complexity:</label>
+          <select id="level-selector">
+            <option value="1">Easy (Words)</option>
+            <option value="2">Medium (Phrases)</option>
+            <option value="3">Advanced (Sentences)</option>
+          </select>
+        </div>
+
+        <div class="chat-control">
+          <label for="chat-search">Search by keyword:</label>
+          <div class="chat-input-wrapper">
+            <input type="text" id="chat-search" placeholder="e.g. Hund, coffee, Katze" />
+            <button id="chat-submit" title="Search">🔍</button>
+          </div>
+          <div id="match-notice"></div>
+        </div>
+      </div>
+
+      <!-- ✅ Grammar info hover legend -->
+      <div id="grammar-tip" style="text-align:center; margin: 10px 0 20px; font-size: 0.9rem; color: #4b5563;">
+        💡 <em>Hover over any German word to reveal grammar info</em>
+      </div>
+
+      <div id="content">
+        <div id="word">Loading...</div>
+        <div id="meaning"></div>
+        <div id="mnemonic"></div>
+      </div>
+
+      <div id="progress">Progress: 0 / 0</div>
+
+      <div class="btn-group">
+        <button id="back-btn">← Back</button>
+        <button id="next-btn">Next →</button>
+        <button id="reset-btn">🔁 Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
