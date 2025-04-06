@@ -26,7 +26,7 @@ let lastQuery = "";
 
 async function fetchGrammarData() {
   try {
-    const res = await fetch("/static/german_grammar_explained.json");
+    const res = await fetch("german_grammar_explained.json");
     grammarData = await res.json();
   } catch (err) {
     console.warn("Could not load grammar JSON.", err);
